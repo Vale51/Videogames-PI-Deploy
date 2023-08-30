@@ -2,13 +2,13 @@ export const validateForm = (game, gamesState) => {
     const errors = {};
     const regex = /^[A-Za-z\s-]+$/;
 
-    // const repeatedGame = gamesState.some(element => game.name === element.name)
+    const repeatedGame = gamesState?.some(element => game.name === element.name)
 
     regex.test(game.name);
 
-    // if (repeatedGame) {
-    //     errors.name = "That name has been already taken.";
-    // }
+    if (repeatedGame) {
+        errors.name = "That name has been already taken.";
+    }
 
     if (!game.name) {
         errors.name = "The 'name' field is required.";
