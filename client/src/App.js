@@ -7,7 +7,7 @@ import Form from './components-copy/Form/Form';
 import Nav from './components-copy/Nav/Nav';
 import Detail from './components-copy/Detail/Detail';
 import axios from "axios"
-axios.defaults.baseURL = "http://localhost:3001"
+axios.defaults.baseURL = "https://videogames-pi-deploy-production.up.railway.app/"
 
 export default function App() {
   const location = useLocation();
