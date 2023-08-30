@@ -2,7 +2,7 @@ export const validateForm = (game, gamesState) => {
     const errors = {};
     const regex = /^[A-Za-z\s-]+$/;
 
-    const repeatedGame = gamesState.some(element => game.name === element.name)
+    // const repeatedGame = gamesState.some(element => game.name === element.name)
 
     regex.test(game.name);
 
