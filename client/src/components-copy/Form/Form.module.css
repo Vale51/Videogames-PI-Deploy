@@ -1,0 +1,207 @@
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.formContainer {
+    height: 72vh;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px 20px 0 0;
+    background-color: #343434;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-direction: row;
+}
+
+.label {
+  display: block;
+  font-size: 16px;
+
+}
+
+.genresContainer {
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.addedGenres {
+  max-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+
+}
+
+
+.formPhoto {
+  size: 40%;
+}
+
+.inputField {
+  width: 100%;
+  font-size: 20px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+.errorMessage {
+  position: relative;
+  height: 20px;
+  color: lightcoral;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.errorInvisible {
+  position: relative;
+  height: 20px;
+  color: transparent;
+  visibility: hidden;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.submitButton {
+    top: 88vh;
+    position: absolute;
+    background-color: #007bff;
+    width: 43.9vw;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #c8c8c8;
+    border-radius: 0 0 20px 20px;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #0056b3;
+}
+
+.submitButton[disabled] {
+  background-color: #ccc;
+  color: #555;
+  cursor: not-allowed;
+}
+
+.formWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+
+.formColumn {
+  flex: 1;
+  height: 62vh;
+  padding: 0 25px;
+}
+
+.inputContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.addGenreButton {
+  margin-top: 2vh;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: #d6d6d6;
+  color: #000000;
+  border-radius: 10px;
+  position: relative;
+  width: 5vw;
+  cursor: pointer;
+}
+
+.addGenreButton:hover {
+  color: #e8e8e8;
+
+  background-color: #3e3e3e;
+}
+
+
+.genresList {
+  display: flex;
+  flex-direction: column;
+}
+
+.genreItem {
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.deleteGenreBtn {
+  margin-left: 5px;
+  cursor: pointer;
+  transition: all .2s ease;
+  border-radius: 50%;
+
+}
+
+.deleteGenreBtn:hover {
+  background-color: red
+}
+
+.platformsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.AddedPlatformsText {
+  margin-right: 2vw;
+}
+
+@keyframes gameCreatedAnim {
+  from {
+    opacity: 0;
+
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes gameCreatedFadeOutAnim {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+
+.gameCreatedMessage {
+  color: #20e520;
+    top: 17px;
+    left: 44.2vw;
+    position: relative;
+    animation: gameCreatedAnim 1s forwards;
+}
+
+.gameCreatedMessage.fadeOut {
+  animation: gameCreatedFadeOutAnim 1s forwards;
+}

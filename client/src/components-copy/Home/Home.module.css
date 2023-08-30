@@ -1,0 +1,188 @@
+.container {
+  min-height: 89vh;
+  background-color: #e5e5f7;
+  background-repeat: repeat;
+  opacity: 0.8;
+  background-image: url('../../img/backgroundCubes.png');
+  background-size: 1932px;
+  background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+}
+
+.homeContainer {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.contentContainer {
+  display: flex;
+  transition: margin-left 0.3s ease;
+}
+
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.button {
+  padding: 5px 15px;
+  background-color: #525252;
+  color: white;
+  right: 30px;
+  rotate: 90deg;
+  position: relative;
+  top: 286px;
+
+  font-size: 25px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-width: 1px;
+  transition: background-color 0.3s, color 0.3s;
+  /* box-shadow: 0px -30px -3px rgb(9, 236, 28); */
+
+
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    /* Altura del rectángulo negro */
+    background-color: rgb(138, 138, 138);
+
+    z-index: -1;
+    /* Detrás del contenido del botón */
+  }
+
+}
+
+.button:hover {
+  background-color: #9c9c9c;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+
+
+.returnButton {
+  position: relative;
+  animation: slideOutX 0.5s ease forwards;
+
+}
+
+@keyframes slideOutX {
+  from {
+    left: 165px;
+
+  }
+
+  to {
+
+    left: -30px;
+  }
+}
+
+.moveButton {
+  position: relative;
+  animation: moveButton 0.5s ease forwards;
+
+}
+
+@keyframes moveButton {
+  from {
+    left: -30px;
+
+  }
+
+  to {
+
+    left: 106px;
+  }
+}
+
+@keyframes slideInX {
+  from {
+    left: 0px;
+
+  }
+
+  to {
+
+    left: 70px;
+  }
+}
+
+/* @keyframes slideOutX {
+    from {
+      left: 0px;
+  
+    }
+  
+    to {
+  
+      left: 20px;
+    }
+  } */
+.loadingContainer {
+  min-height: 89vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.shiftAll {
+  animation: slideInX 0.5s ease forwards;
+
+}
+
+.loadingText {
+
+  color: whitesmoke;
+  
+}
+
+.progressBarContainer {
+  width: 30%;
+  height: 20px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progressBarEmpty {
+  height: 100%;
+  background-color: rgb(35, 197, 247);
+  /* Cambia este color según tu diseño */
+  animation: fillBar 6s ease forwards;
+}
+
+@keyframes fillBar {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+
+  }
+}
+
+.progressBarFull {
+  width: 100%;
+}
+
+
+
+/* 
+
+.unshiftAll {
+    animation: slideOutX 0.5s ease forwards;
+    
+  } */

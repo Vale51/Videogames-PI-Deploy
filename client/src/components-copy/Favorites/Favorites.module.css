@@ -1,0 +1,24 @@
+.title{
+    color: aliceblue;
+    
+    /* background-color: black;
+    border-radius: 10px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 37.5%;
+    margin-right: 37.5%;
+    padding-top: 0.7%;
+    padding-bottom: 0.9%;; */
+}
+
+
+
+.option{
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 8px;
+    color: aliceblue;
+    background-color: rgb(3, 1, 68);
+    font-size: larger;
+    font-family: Verdana, sans-serif;
+}

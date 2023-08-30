@@ -1,0 +1,41 @@
+.paginationContainer{
+  display: flex;
+}
+
+
+.container {
+  position: relative;
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(min-content, max-content);
+  justify-items: center;
+  align-content: end;
+  gap: 20px;
+  width: 80vw;
+}
+
+@keyframes slideOutX {
+  from {
+    left: 70px;
+
+  }
+
+  to {
+
+    left: 0px;
+  }
+}
+
+.cardsShifted {
+  width: 80vw;
+  margin-right: 0vw;
+  margin-left: 0vw;
+}
+
+.returnCards{
+  animation: slideOutX 0.5s ease forwards;
+
+}
+
+

@@ -1,0 +1,70 @@
+/* Landing.css */
+
+.loadingText{
+    color: aliceblue;
+    
+
+}
+
+.landingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    background-color: #171717;
+    background-image: url('../../img/LandingBackground.jpg'); /* Ruta a la imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen al contenedor */
+    background-position-y: 10vh;
+
+  }
+  
+  .landingText {
+    margin-top: 23vh;
+
+    color: aliceblue;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid #ffffff; /* Cursor entre letras */
+    padding-right: 13px; /* Espacio para el cursor */
+    animation: blink-caret 1.5s infinite;
+
+    text-shadow: -2px -2px 0 rgb(0, 0, 0),  
+                 2px -2px 0 black,
+                 -2px 2px 0 black,
+                 2px 2px 0 black; /* Crear un efecto de contorno */
+  }
+  
+  .landingButton {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    background-color: #aa0505;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .landingButton:hover {
+    background-color: #0056b3;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+        border-width: 3px;
+      border-color: #ffffff;
+    }
+  }
