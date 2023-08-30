@@ -44,10 +44,8 @@ const getVideogames = async (req, res) => {
             
             while (videogames.length < 100) {
 
-                console.log("iteracion " + i);
                 const response = await axios.get(nextPage);
                 const results = response.data.results;
-                console.log("pasé ");
 
                 videogames.push(...results);
 

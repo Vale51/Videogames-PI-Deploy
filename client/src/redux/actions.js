@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export const addGame = (game) => {
    try {
-      const endpoint = 'http://localhost:3001/videogames';
+      const endpoint = '/videogames';
       return async (dispatch) => {
          const { data } = await axios.post(endpoint, game)
          return dispatch({
@@ -22,7 +22,7 @@ export const addGame = (game) => {
 
 export const removeGame = (id) => {
    try {
-      const endpoint = 'http://localhost:3001/videogames/' + id;
+      const endpoint = '/videogames/' + id;
       return async (dispatch) => {
          if (isNaN(id)) {
             await axios.delete(endpoint);
@@ -41,7 +41,7 @@ export const removeGame = (id) => {
 
 export const getVideogames = () => {
    try {
-      const endpoint = 'http://localhost:3001/videogames'
+      const endpoint = '/videogames'
       return async (dispatch) => {
          const { data } = await axios.get(endpoint);
          return dispatch({
@@ -59,7 +59,7 @@ export const getVideogames = () => {
 export function searchGame(name) {
    return async (dispatch) => {
       try {
-         const endpoint = `http://localhost:3001/videogames/name?search=${name}`;
+         const endpoint = `/videogames/name?search=${name}`;
          const response = await axios.get(endpoint);
 
          const searchResults = response.data;
@@ -79,7 +79,7 @@ export function searchGame(name) {
 
 export const getDetail = (id) => {
    try {
-      const endpoint = `http://localhost:3001/videogames/${id}`
+      const endpoint = `/videogames/${id}`
       return async (dispatch) => {
          const { data } = await axios.get(endpoint);
          return dispatch({
@@ -124,7 +124,7 @@ export function orderRating(orden) {
 
 export function getGenres() {
    try {
-      const endpoint = `http://localhost:3001/genres`
+      const endpoint = `/genres`
       return async (dispatch) => {
          const { data } = await axios.get(endpoint);
          return dispatch({
