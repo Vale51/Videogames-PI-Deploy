@@ -6,9 +6,9 @@ export const validateForm = (game, gamesState) => {
 
     regex.test(game.name);
 
-    if (repeatedGame) {
-        errors.name = "That name has been already taken.";
-    }
+    // if (repeatedGame) {
+    //     errors.name = "That name has been already taken.";
+    // }
 
     if (!game.name) {
         errors.name = "The 'name' field is required.";
