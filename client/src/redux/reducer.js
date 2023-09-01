@@ -24,7 +24,9 @@ const initialState = {
   detail: null,
   error: null,
   platforms: platformsArray,
-  genres: null
+  genres: null,
+  currentPage: 1
+
 };
 
 const rootReducer = (state = initialState, { type, payload }) => {
@@ -129,6 +131,12 @@ const rootReducer = (state = initialState, { type, payload }) => {
           payload === "Ascendente"
             ? copyOrderRating.sort((a, b) => a.rating - b.rating)
             : copyOrderRating.sort((a, b) => b.rating - a.rating)
+      }
+
+    case CHANGE_PAGE:
+      return {
+        ...state,
+        currentPage: payload
       }
 
     default:

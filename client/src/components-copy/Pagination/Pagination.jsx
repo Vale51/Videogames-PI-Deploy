@@ -1,12 +1,18 @@
 import React from 'react';
 import styles from "./Pagination.module.css";
+import { useDispatch, useSelector } from 'react-redux';
+import { changePage } from '../../redux/actions';
 
-const Pagination = ({ currentPage, itemsPerPage, totalItems, onPageChange }) => {
+const Pagination = ({ itemsPerPage, totalItems }) => {
+  const dispatch = useDispatch();
+
+  const currentPage = useSelector(state => state.currentPage)
   const totalPages = Math.ceil(totalItems / itemsPerPage);
 
   const handlePageClick = (newPage) => {
     if (newPage >= 1 && newPage <= totalPages) {
-      onPageChange(newPage);
+      dispatch(changePage(newPage));
+
     }
   };
 

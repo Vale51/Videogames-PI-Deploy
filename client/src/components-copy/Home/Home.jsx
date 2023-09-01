@@ -21,17 +21,15 @@ const Home = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const games = useSelector(state => state.games)
+    const currentPage = useSelector(state => state.currentPage)
 
-    const [currentPage, setCurrentPage] = useState(1);
+
 
     const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
     const endIndex = startIndex + ITEMS_PER_PAGE;
 
     const gamesToDisplay = games.slice(startIndex, endIndex);
 
-    const handlePageChange = (newPage) => {
-        setCurrentPage(newPage);
-    };
 
 
     useEffect(() => {
@@ -76,10 +74,8 @@ const Home = () => {
             ) : (
                 <div className={styles.mainDiv}>
                     <Pagination
-                        currentPage={currentPage}
                         itemsPerPage={ITEMS_PER_PAGE}
                         totalItems={games.length}
-                        onPageChange={handlePageChange}
                     />
 
                     <div className={`${styles.homeContainer} ${isFilterOrderVisible ? styles.shiftAll : styles.unshiftAll}`}>

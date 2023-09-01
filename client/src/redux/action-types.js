@@ -9,6 +9,7 @@ export const ORDER_NAME = "ORDER_NAME";
 export const ORDER_RATING = "ORDER_RATING";
 export const GET_DETAIL = "GET_DETAIL";
 export const GET_GENRES = "GET_GENRES";
+export const CHANGE_PAGE = "CHANGE_PAGE";
 
 
 
